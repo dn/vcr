@@ -194,7 +194,7 @@ module VCR
     end
 
     def earliest_interaction_recorded_at
-      previously_recorded_interactions.map(&:recorded_at).min
+      previously_recorded_interactions.map(&:recorded_at).max
     end
 
     def should_stub_requests?
